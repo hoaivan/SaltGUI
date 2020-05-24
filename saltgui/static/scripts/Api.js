@@ -203,6 +203,15 @@ export class API {
     return this.apiRequest("POST", "/", params);
   }
 
+  getRunnerStateOrchestrateShowSls () {
+    const params = {
+      "arg": ["*"],
+      "client": "runner",
+      "fun": "state.orchestrate_show_sls"
+    };
+    return this.apiRequest("POST", "/", params);
+  }
+
   getWheelConfigValues () {
     const params = {
       "client": "wheel",
